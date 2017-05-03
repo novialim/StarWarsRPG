@@ -27,7 +27,7 @@ game.finalvictoryFX = new Audio('assets/audio/victorycelebration.mp3');
 
 $(document).ready(function() {
 	console.log( "ready!" );
-	$(this).focus();
+	$(this).prompt();
 
 	var charID;
 	var characterID;
