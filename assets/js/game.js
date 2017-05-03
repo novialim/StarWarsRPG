@@ -31,7 +31,7 @@ $(document).ready(function() {
 function gameScreen(){
 
 	$('#gameContent').append("<input type='text' id='dummy'>");
-	$("#dummy").css({"position":"fixed","right":"150%"}).focus();
+	$("#dummy").css({"position":"fixed","bottom":"150%"}).focus();
 }
 
 gameScreen();
