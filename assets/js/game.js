@@ -176,7 +176,7 @@ $(document).ready(function() {
 	 	// Check if letter key
 	 	if (key === 32){
 	 		// If space is pressed
-	 		console.log("ATTACK!!!!");
+	 		$(this).focus();
 
 	 		$('#lukeskywalkerleft').css({"visibility":"hidden"});
 	 		$('#droidyellowleft').css({"visibility":"hidden"});
