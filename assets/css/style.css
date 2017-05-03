@@ -163,16 +163,16 @@ header {
   visibility: hidden;
 }
 
-#dummy {
+/*#dummy {
   position: absolute;
   z-index: 9999;
   bottom: 70px; 
-/*  margin-left: 50px; */
+  margin-left: 50px; 
   visibility: hidden;
   width: 330.33px;
   height: 67px;
   left: 10px;
-}
+}*/
 
 
 

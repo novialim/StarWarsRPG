@@ -29,8 +29,9 @@ $(document).ready(function() {
 	console.log( "ready!" );
 
 function gameScreen(){
+
 	$('#gameContent').append("<input type='text' id='dummy'>");
-	$("#dummy").css({"position":"fixed","left":"120%"}).focus();
+	$("#dummy").css({"position":"fixed","right":"150%"}).focus();
 }
 
 gameScreen();
@@ -52,9 +53,8 @@ gameScreen();
 
 	$('#picklukeskywalker').on("click", function(evt) {
 
-		$("#picklukeskywalker").focus();
 		charID = evt.target.id;
-
+		gameScreen();
 		console.log( "luke clicked!!" );
 		console.log(evt);
 
