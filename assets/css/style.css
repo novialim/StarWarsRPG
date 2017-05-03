@@ -1,0 +1,600 @@
+@font-face {
+  font-family: 'Star Jedi Hollow';
+  src: url('../fonts/Starjhol.ttf');
+
+  font-family: 'Anakin Mono';
+  src: url('../fonts/anakinmono.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Anakin Mono', sans-serif;
+  background: #000;
+  text-align: center;
+  color: yellow;
+}
+
+header {
+  font-family: 'Star Jedi Hollow', sans-serif;
+  margin: 5px 0;
+  font-size: 1em;
+  color: #e0d54a;
+}
+
+.stage { 
+  width: 450px; 
+  height: 181px; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  position: relative; 
+  z-index: 0; 
+  background: url(../images/bg.jpg) no-repeat 0px 0px; 
+  background-size: contain; 
+}
+
+
+#KO { 
+  position: absolute;
+  top: 12px;
+  margin-left: 210px; 
+  width: 40px;
+  height: 31px;
+  z-index: 9999; 
+  background: url(../images/KO.png) no-repeat 0px 0px; 
+}
+
+.pickcharacter {
+  width: 450px; 
+  height: 180px; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  position: relative; 
+  z-index: 0;
+  background-size: contain;  
+}
+
+#toggleMusic {
+  position: absolute;
+  bottom: 1px;
+  margin-left: 6px; 
+  cursor: pointer;
+}
+
+.healthBar {
+  position: absolute;
+  top: 15px;
+  width: 215px;
+  height: 25px;
+  z-index: 9998;
+}
+
+#player1HP {
+  position: absolute;
+  top: 20px;
+  color: white;
+}
+
+#player1HPBar {
+  position: absolute;
+  top: 15px;
+  width: 220px;
+  height: 25px;
+  border: 1px solid #fff;
+  background-color: red;
+}
+
+#player1HPBar div {
+  float: right;
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: yellow;
+}
+
+#player2HPBar {
+  position: absolute;
+  top: 15px;
+  left: 240px;  
+  width: 220px;
+  height: 25px;
+  border: 1px solid #fff;
+  background-color: red;
+}
+
+#player2HPBar div {
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: yellow;
+}
+
+#player2HP {
+  position: absolute;
+  top: 20px;
+  left: 240px;
+  color: white;
+}
+
+.hpBackground {
+  position: absolute;
+  top: 15px;
+  width: 215px;
+  height: 25px;
+  z-index: 9997;
+  background-color: yellow;
+}
+
+
+#playerHP {
+  left: 5px;
+  background-color: #dd0b1f;
+}    
+
+#hpBG1 {
+  left: 5px;
+  border: 1px solid white;
+}
+
+#CPUHP {
+  right: 5px;
+  background-color: #00ad23;
+}
+
+#hpBG2 {
+  right: 5px;
+  border: 1px solid white;
+}
+
+#lukeskywalkerdeadleft{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 110px; 
+  background: url('../images/lukeskywalkerdeadleft.png') no-repeat;
+  width: 60px;
+  height: 33px;
+  visibility: hidden;
+}
+
+
+#lukeskywalkerleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 120px; 
+  background: url('../images/starwars3sheet1.gif') no-repeat -367px -70px;
+  width: 33.33px;
+  height: 67px;
+  animation: play .8s steps(6) infinite;
+  visibility: hidden;
+}
+
+#lukeskywalkerdeadright{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px; 
+  background: url('../images/lukeskywalkerdeadright.png') no-repeat;
+  width: 60px;
+  height: 33px;
+  visibility: hidden;
+}
+
+
+#lukeskywalkerright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px;   
+  background: url('../images/starwars3sheet1.gif') no-repeat -157px -70px;
+  width: 33px;
+  height: 67px;
+  animation: playright .8s steps(6) infinite;
+  visibility: hidden;
+}
+
+#picklukeskywalker {
+  position: absolute;
+  z-index: 9999;
+  bottom: 70px; 
+  margin-left: 110px; 
+  background: url('../images/starwars3sheet1.gif') no-repeat -367px -70px;
+  width: 33.33px;
+  height: 67px;
+  animation: play .8s steps(6) infinite;
+  /*visibility: hidden;*/
+}
+
+@keyframes play { 
+  from { background-position: -367px -70px; }
+  to { background-position: -575px -70px; } 
+}
+
+@keyframes playright { 
+  from { background-position: -157px -70px; }
+  to { background-position: -365px -70px; } 
+}
+
+#lukeskywalkervictoryleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 120px; 
+  background: url('../images/starwars3sheet1.gif') no-repeat no-repeat -367px -1794px;
+  width: 80px;
+  height: 69px;
+  animation: lsvictoryleft .8s steps(3) infinite;
+  visibility: hidden;
+}
+
+@keyframes lsvictoryleft { 
+  from { background-position: -367px -1794px; }
+  to { background-position: -610px -1794px; } 
+}
+
+
+#lukeskywalkerattacksleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 120px; 
+  background: url('../images/starwars3sheet1.gif') no-repeat -367px -139px;
+  width: 59px;
+  height: 61px;
+  animation: lsattackleft .8s steps(6) infinite;
+  visibility: hidden;
+}
+
+@keyframes lsattackleft { 
+  from { background-position: -367px -139px; }
+  to { background-position: -731px -139px; } 
+}
+
+#lukeskywalkerattacksright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px;   
+  background: url('../images/starwars3sheet1.gif') no-repeat -1px -139px;
+  width: 59px;
+  height: 61px;
+  animation: lsattackright .8s steps(6) infinite;
+  visibility: hidden;
+}
+
+@keyframes lsattackright { 
+  from { background-position: -1px -139px; }
+  to { background-position: -365px -139px; } 
+}
+
+
+#droidyellowdeadleft{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 110px; 
+  background: url('../images/droidyellowdeadleft.png') no-repeat;
+  width: 62px;
+  height: 21px;
+  visibility: hidden;
+}
+
+#droidyellowleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 140px; 
+  background: url('../images/starwars3sheet2.gif') no-repeat -381px -56px;
+  width: 36px;
+  height: 52px;
+  animation: droidplay .8s steps(2) infinite;
+  visibility: hidden;
+}
+
+#droidyellowdeadright{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px; 
+  background: url('../images/droidyellowdeadleft.png') no-repeat;
+  width: 62px;
+  height: 21px;
+  visibility: hidden;
+}
+
+#droidyellowright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px;   
+  background: url('../images/starwars3sheet2.gif') no-repeat -57px -197px;
+  width: 36px;
+  height: 52px;
+  animation: droidplayright .8s steps(2) infinite;
+  visibility: hidden;
+}
+
+#pickdroidyellow {
+  position: absolute;
+  z-index: 9999;
+  bottom: 70px; 
+  margin-left: 175px;
+  background: url('../images/starwars3sheet2.gif') no-repeat -630px -197px;
+  width: 36px;
+  height: 53px;
+  animation: droidplay .8s steps(2) infinite;
+  /* visibility: hidden;*/
+}
+
+@keyframes droidplay { 
+  from { background-position: -630px -197px; }
+  to { background-position: -704px -197px; } 
+}
+
+@keyframes droidplayright { 
+  from { background-position: -57px -197px; }
+  to { background-position: -129px -197px; } 
+}
+
+#droidyellowattacksright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px;   
+  background: url('../images/droidyellowattacks.png') no-repeat left center;
+  width: 60px;
+  height: 56px;
+  animation: droidplayrightattack .8s steps(9) infinite;
+  visibility: hidden;
+}
+
+@keyframes droidplayrightattack { 
+  100% { background-position: -540px; }
+}
+
+#droidyellowattacksleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 140px;   
+  background: url('../images/droidyellowattacksleft.png') no-repeat left center;
+  width: 60px;
+  height: 56px;
+  animation: droidplayrightleft .8s steps(9) infinite;
+  visibility: hidden;
+}
+
+@keyframes droidplayrightleft { 
+  100% { background-position: -540px; }
+}
+
+#droidbrowndeadleft{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 110px; 
+  background: url('../images/droidbrowndeadleft.png') no-repeat;
+  width: 62px;
+  height: 21px;
+  visibility: hidden;
+}
+
+#droidbrownleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 140px; 
+  background: url('../images/starwars3sheet3.gif') no-repeat -479px -319px;
+  width: 34px;
+  height: 53px;
+  animation: browndroidplay .8s steps(2) infinite;
+  visibility: hidden;
+}
+
+#droidbrowndeadright{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px; 
+  background: url('../images/droidbrowndeadright.png') no-repeat;
+  width: 62px;
+  height: 21px;
+  visibility: hidden;
+}
+
+#droidbrownright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px;   
+  background: url('../images/starwars3sheet3.gif') no-repeat -202px -319px;
+  width: 34px;
+  height: 53px;
+  animation: browndroidplayright .8s steps(2) infinite;
+  visibility: hidden;
+}
+
+#pickdroidbrown {
+  position: absolute;
+  z-index: 9999;
+  bottom: 70px; 
+  margin-left: 235px;
+  background: url('../images/starwars3sheet3.gif') no-repeat -479px -319px;
+  width: 34px;
+  height: 53px;
+  animation: browndroidplay .8s steps(2) infinite;
+  /* visibility: hidden;*/
+}
+
+@keyframes browndroidplay { 
+  from { background-position: -479px -319px; }
+  to { background-position: -551px -319px; } 
+}
+
+@keyframes browndroidplayright { 
+  from { background-position: -202px -319px; }
+  to { background-position: -277px -319px; } 
+}
+
+#droidbrownattacksright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px;   
+  background: url('../images/droidbrownattacks.png') no-repeat left center;
+  width: 60px;
+  height: 56px;
+  animation: browndroidplayrightattack .8s steps(9) infinite;
+  visibility: hidden;
+}
+
+@keyframes browndroidplayrightattack { 
+  100% { background-position: -540px; }
+}
+
+#droidbrownattacksleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 140px;   
+  background: url('../images/droidbrownattacksleft.png') no-repeat left center;
+  width: 60px;
+  height: 56px;
+  animation: browndroidplayleftattack .8s steps(9) infinite;
+  visibility: hidden;
+}
+
+@keyframes browndroidplayleftattack { 
+  100% { background-position: -540px; }
+}
+
+#stormtrooperdeadleft{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 110px; 
+  background: url('../images/stormtrooperdeadleft.png') no-repeat;
+  width: 62px;
+  height: 21px;
+  visibility: hidden;
+}
+
+#stormtrooperleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 140px; 
+  background: url('../images/starwars3sheet6.gif') no-repeat -434px -504px;
+  width: 45px;
+  height: 57px;
+  animation: stplay .8s steps(4) infinite;
+  visibility: hidden;
+}
+
+#stormtrooperdeadright{
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px; 
+  background: url('../images/stormtrooperdeadright.png') no-repeat;
+  width: 60px;
+  height: 16px;
+  visibility: hidden;
+}
+
+#stormtrooperright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px; 
+  background: url('../images/starwars3sheet6.gif') no-repeat -40px -504px;
+  width: 45px;
+  height: 57px;
+  animation: stplayright .8s steps(4) infinite;
+  visibility: hidden;
+}
+
+#pickstormtrooper {
+  position: absolute;
+  z-index: 9999;
+  bottom: 70px; 
+  margin-left: 300px;
+  background: url('../images/starwars3sheet6.gif') no-repeat -434px -504px;
+  width: 45px;
+  height: 57px;
+  animation: stplay .8s steps(4) infinite;
+  /* visibility: hidden;*/
+}
+
+@keyframes stplay { 
+  from { background-position: -434px -504px; }
+  to { background-position: -614px -504px; } 
+}
+
+@keyframes stplayright { 
+  from { background-position: -40px -504px; }
+  to { background-position: -220px -504px; } 
+}
+
+#stormtrooperattacksright {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 280px; 
+  background: url('../images/stattacksright.png') no-repeat left center;
+  width: 60px;
+  height: 60px;
+  animation: stplayrightattack .8s steps(7) infinite;
+  visibility: hidden;
+}
+
+@keyframes stplayrightattack { 
+  100% { background-position: -420px; }
+}
+
+#stormtrooperattacksleft {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px; 
+  margin-left: 140px; 
+  background: url('../images/stattacksleft.png') no-repeat left center;
+  width: 60px;
+  height: 60px;
+  animation: stplayleftattack .8s steps(7) infinite;
+  visibility: hidden;
+}
+
+@keyframes stplayleftattack { 
+  100% { background-position: -420px; }
+}
+
+
+#scoreboard {
+  width: 180px;
+  margin: 20px auto 0 auto;
+}
+
+#score {
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-top: 10px;
+  color: green;
+}
+
+
+.clearfix:after {
+ content: " "; /* Older browser do not support empty content */
+ visibility: hidden;
+ display: block;
+ height: 0;
+ clear: both;
+}
