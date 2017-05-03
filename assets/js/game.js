@@ -27,7 +27,6 @@ game.finalvictoryFX = new Audio('assets/audio/victorycelebration.mp3');
 
 $(document).ready(function() {
 	console.log( "ready!" );
-	$(this).prompt();
 
 	var charID;
 	var characterID;
@@ -47,6 +46,7 @@ $(document).ready(function() {
 
 	$('#picklukeskywalker').on("click", function(evt) {
 
+		$(this).focus();
 		charID = evt.target.id;
 
 		console.log( "luke clicked!!" );
