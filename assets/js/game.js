@@ -84,6 +84,7 @@ gameScreen();
 	$('#pickdroidyellow').on("click", function(evt) {
 
 		charID = evt.target.id;	
+		gameScreen();
 
 		console.log( "yellow clicked!!" );
 		console.log(evt);
@@ -114,6 +115,7 @@ gameScreen();
 	$('#pickdroidbrown').on("click", function(evt) {
 
 		charID = evt.target.id;	
+		gameScreen();
 
 		console.log("brown clicked 1!!");
 		console.log(evt);
@@ -145,6 +147,7 @@ gameScreen();
 	$('#pickstormtrooper').on("click", function(evt) {
 
 		charID = evt.target.id;	
+		gameScreen();
 
 		console.log(charID);
 		console.log("trooper clicked!!");
