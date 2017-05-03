@@ -41,7 +41,7 @@ $(document).ready(function() {
 	var player2HP;
 	var wincounter = [];
 
-
+	$(this).trigger("focus");
 	reset();
 
 	$('#picklukeskywalker').on("click", function(evt) {
