@@ -28,8 +28,12 @@ game.finalvictoryFX = new Audio('assets/audio/victorycelebration.mp3');
 $(document).ready(function() {
 	console.log( "ready!" );
 
+function gameScreen(){
 	$('#gameContent').append("<input type='text' id='dummy'>");
 	$("#dummy").css({"position":"fixed","left":"120%"}).focus();
+}
+
+gameScreen();
 
 	var charID;
 	var characterID;
