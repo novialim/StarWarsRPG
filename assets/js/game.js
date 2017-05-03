@@ -28,6 +28,9 @@ game.finalvictoryFX = new Audio('assets/audio/victorycelebration.mp3');
 $(document).ready(function() {
 	console.log( "ready!" );
 
+	$('#gameContent').append("<input type='text' id='dummy'>");
+	$("#dummy").css({"position":"fixed","left":"120%"}).focus();
+
 	var charID;
 	var characterID;
 	var playerone = false;
@@ -41,7 +44,6 @@ $(document).ready(function() {
 	var player2HP;
 	var wincounter = [];
 
-	$(this).trigger("focus");
 	reset();
 
 	$('#picklukeskywalker').on("click", function(evt) {
