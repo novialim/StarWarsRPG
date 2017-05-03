@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 	$('#picklukeskywalker').on("click", function(evt) {
 
-		$(this).focus();
+		focus();
 		charID = evt.target.id;
 
 		console.log( "luke clicked!!" );
