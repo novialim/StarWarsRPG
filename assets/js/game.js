@@ -27,6 +27,7 @@ game.finalvictoryFX = new Audio('assets/audio/victorycelebration.mp3');
 
 $(document).ready(function() {
 	console.log( "ready!" );
+	$(this).focus();
 
 	var charID;
 	var characterID;
@@ -176,7 +177,6 @@ $(document).ready(function() {
 	 	// Check if letter key
 	 	if (key === 32){
 	 		// If space is pressed
-	 		$(this).focus();
 
 	 		$('#lukeskywalkerleft').css({"visibility":"hidden"});
 	 		$('#droidyellowleft').css({"visibility":"hidden"});
