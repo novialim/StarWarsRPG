@@ -166,12 +166,15 @@ header {
 #dummy {
   position: absolute;
   z-index: 9999;
-  bottom: 20px; 
-  margin-left: 120px; 
+  bottom: 70px; 
+/*  margin-left: 50px; */
   visibility: hidden;
   width: 330.33px;
   height: 67px;
+  left: 10px;
 }
+
+
 
 
 #lukeskywalkerleft {
