@@ -313,6 +313,7 @@ gameScreen();
 							}
 							game.musicToggle();
 							game.finalvictoryFX.play();
+							$("#winorlose").text("The Force is strong with this one.");					
 						}
 
 						console.log("number of wins: " + wincounter.length);
@@ -326,6 +327,7 @@ gameScreen();
 						playeroneIsDead = true;
 						console.log("You are DEAD!");
 						$("#pickstatus").text("You LOST! Game Over!");
+						$("#winorlose").text("I've got a very bad feeling about this.");
 						deadAnimation("0",fightCharacter[0].id);
 						$("#"+fightCharacter[0].charClassleft).css({"visibility":"hidden"});
 					}
