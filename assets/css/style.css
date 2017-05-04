@@ -55,7 +55,7 @@ header {
 #KO { 
   position: absolute;
   top: 12px;
-  margin-left: 50%; 
+  margin-left: 45%; 
   width: 40px;
   height: 31px;
   z-index: 9999; 
@@ -185,11 +185,28 @@ header {
   visibility: hidden;
 }
 
+ #gamecontent{
+  height: 0;
+  line-height: 0;
+ }
+
+ input{
+  height=0;
+ }
+
   #dummy{
-    width:0px;
-    height:0px;
-    background-color: #000;
+    height: 0;
+    border: none;
+    color: transparent;
+    text-shadow: 0 0 0 gray;
+    text-align: center;
     opacity: 0;
+    z-index: 9999;
+    float: left;
+
+    &:focus {
+        outline: none;
+    }
   }
 
 
