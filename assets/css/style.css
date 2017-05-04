@@ -30,8 +30,8 @@ header {
 }
 
 .stage { 
-  min-width: 450px;
-  width: 28.125em; 
+  
+  width: 100%; 
   height: 11.313em; 
   margin: 0 auto; 
   overflow: hidden; 
@@ -97,6 +97,7 @@ header {
 #pickstatus {
   clear:both;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #player1HPBar {
@@ -250,7 +251,7 @@ header {
   #picklukeskywalker {
     position: absolute;
     z-index: 9999;
-    bottom: 70px; 
+    bottom: 60px; 
     margin-left: 30%; 
     background: url('../images/starwars3sheet1.gif') no-repeat -367px -70px;
     width: 33.33px;
@@ -372,7 +373,7 @@ header {
   #pickdroidyellow {
     position: absolute;
     z-index: 9999;
-    bottom: 70px; 
+    bottom: 60px; 
     margin-left: 42%;
     background: url('../images/starwars3sheet2.gif') no-repeat -630px -197px;
     width: 36px;
@@ -473,7 +474,7 @@ header {
   #pickdroidbrown {
     position: absolute;
     z-index: 9999;
-    bottom: 70px; 
+    bottom: 60px; 
     margin-left: 55%;
     background: url('../images/starwars3sheet3.gif') no-repeat -479px -319px;
     width: 34px;
@@ -574,7 +575,7 @@ header {
   #pickstormtrooper {
     position: absolute;
     z-index: 9999;
-    bottom: 70px; 
+    bottom: 60px; 
     margin-left: 65%;
     background: url('../images/starwars3sheet6.gif') no-repeat -434px -504px;
     width: 45px;
