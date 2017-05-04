@@ -163,6 +163,8 @@ gameScreen();
 		}
 		else if (!playertwo){
 			removeDeadBody();
+			progress(100, $('#player2HPBar'), 100);
+
 			$('#stormtrooperright').css({"visibility":"visible"});
 			game.loadyourweaponFX.play();
 			playertwo = true;
