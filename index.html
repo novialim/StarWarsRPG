@@ -4,35 +4,28 @@
     https://novialim.github.io/week-4-challengegame/ 
     =============================================== -->
 
-<!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml"
-          xmlns:og="http://ogp.me/ns#">
+    <!DOCTYPE html>
+    <html>
     <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta property="og:image" content="http://i.imgur.com/vHQulUk.jpg" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-      <link rel="manifest" href="assets/favicons/manifest.json">
-      <meta name="theme-color" content="#ffffff">
+    	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon.png">
+    	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    	<link rel="manifest" href="assets/favicons/manifest.json">
+    	<meta name="theme-color" content="#ffffff">
 
-        <!--   Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    	<!-- Javascript/JQuery -->
+    	<!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+    	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    	<script type="text/javascript" src="assets/js/game.js"></script>
 
-        <!-- Javascript/JQuery -->
-        <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script type="text/javascript" src="assets/js/game.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-        <title>Star Wars Final Battle!</title>
+    	<title>Star Wars Final Battle!</title>
     </head>
 
     <body>
@@ -41,73 +34,68 @@
     	<audio id="theme" autoplay loop>
     		<source src="assets/audio/rebel-theme.mp3" type="audio/mp3">
     			<p>If you are reading this, it is because your browser does not support the audio element.</p>
-           </audio> 
+    		</audio> 
 
-           <div class="container">
-            <div class = "row">
-                
-                <div class="col-sm-12">
-                  <header>
-                     <h1>STAR WARS FINAL BATTLE</h1>
-                 </header>
-             </div>
-             
-             <div class="col-sm-12">
-              <div class="stageholder img-responsive">
-               <img class="stage img-responsive">
-               <div id="KO"></div>
-               <div id="lukeskywalkerleft"></div>
-               <div id="lukeskywalkervictoryleft"></div>
-               <div id="droidyellowleft"></div>
-               <div id="droidbrownleft"></div>
-               <div id="stormtrooperleft"></div>
-               <div id="lukeskywalkerright"></div>
-               <div id="droidyellowright"></div>
-               <div id="droidbrownright"></div>
-               <div id="stormtrooperright"></div>
 
-               <div id="lukeskywalkerdeadleft"></div>
-               <div id="droidyellowdeadleft"></div>
-               <div id="droidbrowndeadleft"></div>
-               <div id="stormtrooperdeadleft"></div>
-               <div id="lukeskywalkerdeadright"></div>
-               <div id="droidyellowdeadright"></div>
-               <div id="droidbrowndeadright"></div>
-               <div id="stormtrooperdeadright"></div>		
+    		<header>
+    			<h1>STAR WARS FINAL BATTLE</h1>
+    		</header>
 
-               <div id="lukeskywalkerattacksleft"></div>
-               <div id="lukeskywalkerattacksright"></div>
-               <div id="droidyellowattacksleft"></div>
-               <div id="droidyellowattacksright"></div>
-               <div id="droidbrownattacksleft"></div>
-               <div id="droidbrownattacksright"></div>
-               <div id="stormtrooperattacksleft"></div>
-               <div id="stormtrooperattacksright"></div>
 
-               <div id="toggleMusic" onclick="game.musicToggle()"><img src="assets/images/mute.png"></div>
+    		<div class="stage">
+    			<div id="KO"></div>
+    			<div id="lukeskywalkerleft"></div>
+    			<div id="lukeskywalkervictoryleft"></div>
+    			<div id="droidyellowleft"></div>
+    			<div id="droidbrownleft"></div>
+    			<div id="stormtrooperleft"></div>
+    			<div id="lukeskywalkerright"></div>
+    			<div id="droidyellowright"></div>
+    			<div id="droidbrownright"></div>
+    			<div id="stormtrooperright"></div>
 
-               <div class="healthBar" id="player1HP"></div>
-               <div class="healthBar" id="player2HP"></div>
+    			<div id="lukeskywalkerdeadleft"></div>
+    			<div id="droidyellowdeadleft"></div>
+    			<div id="droidbrowndeadleft"></div>
+    			<div id="stormtrooperdeadleft"></div>
+    			<div id="lukeskywalkerdeadright"></div>
+    			<div id="droidyellowdeadright"></div>
+    			<div id="droidbrowndeadright"></div>
+    			<div id="stormtrooperdeadright"></div>		
 
-               <div id="player2HPBar"><div></div></div>
-               <div id="player1HPBar"><div></div></div>
+    			<div id="lukeskywalkerattacksleft"></div>
+    			<div id="lukeskywalkerattacksright"></div>
+    			<div id="droidyellowattacksleft"></div>
+    			<div id="droidyellowattacksright"></div>
+    			<div id="droidbrownattacksleft"></div>
+    			<div id="droidbrownattacksright"></div>
+    			<div id="stormtrooperattacksleft"></div>
+    			<div id="stormtrooperattacksright"></div>
 
-           </div>
-       </div>
+    			<div id="toggleMusic" onclick="game.musicToggle()"><img src="assets/images/mute.png"></div>
+	
 
-       <div class="pickcharacter">
-        <div id="pickstatus">Pick Your Character</div>
-        <div id="picklukeskywalker" value="picklukeskywalker"></div>
-        <div id="pickdroidyellow" value="pickdroidyellow"></div>
-        <div id="pickdroidbrown" value="pickdroidbrown"></div>
-        <div id="pickstormtrooper" value="pickstormtrooper"></div>
-        <div id="gameContent"></div>
-    </div>
 
-    <div>Press space to attack</div>
+	<div class="healthBar" id="player1HP"></div>
+	<div class="healthBar" id="player2HP"></div>
+
+	<div id="player2HPBar"><div></div></div>
+	<div id="player1HPBar"><div></div></div>
+
+    
 
 </div>
+
+<div class="pickcharacter">
+    <div id="gameContent"></div>
+	<p id="pickstatus">Pick Your Character</p>
+	<div id="picklukeskywalker" value="picklukeskywalker"></div>
+	<div id="pickdroidyellow" value="pickdroidyellow"></div>
+	<div id="pickdroidbrown" value="pickdroidbrown"></div>
+	<div id="pickstormtrooper" value="pickstormtrooper"></div>
 </div>
+
+<div>Press space to attack</div>
 
 </body>
 </html>
