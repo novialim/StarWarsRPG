@@ -30,8 +30,8 @@ header {
 }
 
 .stage { 
-  
-  width: 100%; 
+  min-width: 450px;
+  width: 28.125em; 
   height: 11.313em; 
   margin: 0 auto; 
   overflow: hidden; 
@@ -55,7 +55,7 @@ header {
 #KO { 
   position: absolute;
   top: 12px;
-  margin-left: 45%; 
+  margin-left: 50%; 
   width: 40px;
   height: 31px;
   z-index: 9999; 
@@ -97,7 +97,6 @@ header {
 #pickstatus {
   clear:both;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 #player1HPBar {
@@ -186,28 +185,11 @@ header {
   visibility: hidden;
 }
 
- #gamecontent{
-  height: 0;
-  line-height: 0;
- }
-
- input{
-  height=0;
- }
-
   #dummy{
-    height: 0;
-    border: none;
-    color: transparent;
-    text-shadow: 0 0 0 gray;
-    text-align: center;
+    width:0px;
+    height:0px;
+    background-color: #000;
     opacity: 0;
-    z-index: 9999;
-    float: left;
-
-    &:focus {
-        outline: none;
-    }
   }
 
 
@@ -251,7 +233,7 @@ header {
   #picklukeskywalker {
     position: absolute;
     z-index: 9999;
-    bottom: 60px; 
+    bottom: 70px; 
     margin-left: 30%; 
     background: url('../images/starwars3sheet1.gif') no-repeat -367px -70px;
     width: 33.33px;
@@ -373,7 +355,7 @@ header {
   #pickdroidyellow {
     position: absolute;
     z-index: 9999;
-    bottom: 60px; 
+    bottom: 70px; 
     margin-left: 42%;
     background: url('../images/starwars3sheet2.gif') no-repeat -630px -197px;
     width: 36px;
@@ -474,7 +456,7 @@ header {
   #pickdroidbrown {
     position: absolute;
     z-index: 9999;
-    bottom: 60px; 
+    bottom: 70px; 
     margin-left: 55%;
     background: url('../images/starwars3sheet3.gif') no-repeat -479px -319px;
     width: 34px;
@@ -575,7 +557,7 @@ header {
   #pickstormtrooper {
     position: absolute;
     z-index: 9999;
-    bottom: 60px; 
+    bottom: 70px; 
     margin-left: 65%;
     background: url('../images/starwars3sheet6.gif') no-repeat -434px -504px;
     width: 45px;
