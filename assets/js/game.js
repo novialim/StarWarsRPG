@@ -51,6 +51,11 @@ gameScreen();
 
 	reset();
 
+	$('#restart').on("click", function(evt) {
+		location.reload();
+
+	});
+
 	$('#picklukeskywalker').on("click", function(evt) {
 
 		charID = evt.target.id;
@@ -306,6 +311,7 @@ gameScreen();
 							$("#pickstatus").text("Pick Another Character");
 						}else{
 							$("#pickstatus").text("You WIN !!!");
+							$("#restart").css({"visibility":"visible"});
 							
 							if (fightCharacter[0].id==="picklukeskywalker"){
 								$("#lukeskywalkerattacksleft").css({"visibility":"hidden"});
@@ -411,24 +417,25 @@ gameScreen();
 		}
 	} 
 
-	function playerHPFight(player1, player2){
-
-	}
-
 	function reset(){
 
 		charID="";
 		playerone = false;
 		playertwo = false;
 
+		fightCharacter = [];
+
 		progress(100, $('#player2HPBar'), 100);
 		progress(100, $('#player1HPBar'), 100);
 
+		$("#restart").css({"visibility":"hidden"});
 
-		$('#picklukeskywalker').css({"visibility":"show"});
-		$('#pickdroidyellow').css({"visibility":"show"});
-		$('#pickdroidbrown').css({"visibility":"show"});
-		$('#pickstormtrooper').css({"visibility":"show"});
+		$("#lukeskywalkervictoryleft").css({"visibility":"hidden"});
+
+		$('#picklukeskywalker').css({"visibility":"visible"});
+		$('#pickdroidyellow').css({"visibility":"visible"});
+		$('#pickdroidbrown').css({"visibility":"visible"});
+		$('#pickstormtrooper').css({"visibility":"visible"});
 
 		allCharacter = [
 		{"id": "picklukeskywalker", "name":"Luke Sky Walker", "healthPoints":120, "attackPower":8, "counterAttackPower":20, "charClassright":"lukeskywalkerattacksright", "charClassleft":"lukeskywalkerattacksleft"},
