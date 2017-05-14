@@ -336,6 +336,7 @@ gameScreen();
 						$("#winorlose").text("I've got a very bad feeling about this.");
 						deadAnimation("0",fightCharacter[0].id);
 						$("#"+fightCharacter[0].charClassleft).css({"visibility":"hidden"});
+						$("#restart").css({"visibility":"visible"});
 					}
 
 					// update();
